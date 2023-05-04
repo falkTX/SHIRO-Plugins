@@ -12,28 +12,20 @@ NAME = Modulay
 # --------------------------------------------------------------
 # Files to build
 
-OBJS_DSP = \
-	DistrhoPluginMaxGen.cpp.o
+FILES_DSP = \
+	DistrhoPluginMaxGen.cpp
 
 # --------------------------------------------------------------
 # Do some magic
 
-include ../Makefile.mk
+include ../../dpf/Makefile.plugins.mk
+
+BUILD_CXX_FLAGS += -I../common -I../common/gen_dsp
+BUILD_CXX_FLAGS += -Wno-unused-parameter
 
 # --------------------------------------------------------------
 # Enable all possible plugin types
 
-ifeq ($(HAVE_JACK),true)
-TARGETS += jack
-endif
-
-ifeq ($(LINUX),true)
-TARGETS += ladspa
-endif
-
-TARGETS += lv2_dsp
-TARGETS += vst
-
-all: $(TARGETS)
+all: jack ladspa lv2_dsp vst2 vst3
 
 # --------------------------------------------------------------

@@ -24,11 +24,12 @@
 #define DISTRHO_PLUGIN_IS_RT_SAFE    0
 #define DISTRHO_PLUGIN_NUM_INPUTS    1
 #define DISTRHO_PLUGIN_NUM_OUTPUTS   1
-#define DISTRHO_PLUGIN_USES_MODGUI   1
+#define DISTRHO_PLUGIN_USES_MODGUI   0
 
 #define DISTRHO_PLUGIN_LV2_CATEGORY "lv2:DelayPlugin"
 
 #define DISTRHO_PLUGIN_DESCRIPTION "Modulay is a delay with variable types of modulation based on the setting of the Morph-knob."
-#define DISTRHO_PLUGIN_VERSION d_cconst('D', 'M', 'd', 'y')
+#define DISTRHO_PLUGIN_UNIQUE_ID d_cconst('D', 'M', 'd', 'y')
+#define DISTRHO_PLUGIN_VERSION d_version(0, 2, 0)
 
 #endif // DISTRHO_PLUGIN_INFO_H_INCLUDED

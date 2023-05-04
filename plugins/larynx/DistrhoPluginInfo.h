@@ -24,11 +24,12 @@
 #define DISTRHO_PLUGIN_IS_RT_SAFE    0
 #define DISTRHO_PLUGIN_NUM_INPUTS    1
 #define DISTRHO_PLUGIN_NUM_OUTPUTS   1
-#define DISTRHO_PLUGIN_USES_MODGUI   1
+#define DISTRHO_PLUGIN_USES_MODGUI   0
 
 #define DISTRHO_PLUGIN_LV2_CATEGORY "lv2:ModulatorPlugin"
 
 #define DISTRHO_PLUGIN_DESCRIPTION "Larynx is a simple vibrato with a tone control."
-#define DISTRHO_PLUGIN_VERSION d_cconst('D', 'V', 'b', 'r')
+#define DISTRHO_PLUGIN_UNIQUE_ID d_cconst('D', 'V', 'b', 'r')
+#define DISTRHO_PLUGIN_VERSION d_version(0, 2, 0)
 
 #endif // DISTRHO_PLUGIN_INFO_H_INCLUDED

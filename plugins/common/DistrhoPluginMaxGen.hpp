@@ -1,6 +1,6 @@
 /*
  * DPF Max Gen
- * Copyright (C) 2015 Filipe Coelho <falktx@falktx.com>
+ * Copyright (C) 2015-2023 Filipe Coelho <falktx@falktx.com>
  *
  * Permission to use, copy, modify, and/or distribute this software for any purpose with
  * or without fee is hereby granted, provided that the above copyright notice and this
@@ -14,15 +14,14 @@
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-#ifndef DISTRHO_PLUGIN_MAX_GEN_HPP_INCLUDED
-#define DISTRHO_PLUGIN_MAX_GEN_HPP_INCLUDED
+#pragma once
 
 #include "DistrhoPlugin.hpp"
 #include "genlib.h"
 
 START_NAMESPACE_DISTRHO
 
-// -----------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 
 class DistrhoPluginMaxGen : public Plugin
 {
@@ -31,7 +30,7 @@ public:
     ~DistrhoPluginMaxGen() override;
 
 protected:
-    // -------------------------------------------------------------------
+    // ----------------------------------------------------------------------------------------------------------------
     // Information
 
     const char* getLabel() const noexcept override
@@ -44,49 +43,49 @@ protected:
         return DISTRHO_PLUGIN_DESCRIPTION;
     }
 
+    int64_t getUniqueId() const noexcept override
+    {
+        return DISTRHO_PLUGIN_UNIQUE_ID;
+    }
+
     const char* getMaker() const noexcept override
     {
-        return "DISTRHO";
+        return DISTRHO_PLUGIN_BRAND;
     }
 
     const char* getHomePage() const noexcept override
     {
-        return "https://github.com/DISTRHO/DPF-Max-Gen";
+        return "https://github.com/ninodewit/SHIRO-Plugins";
     }
 
     const char* getLicense() const noexcept override
     {
-        return "ISC";
+        return "GPLv3+";
     }
 
     uint32_t getVersion() const noexcept override
     {
-        return d_version(0, 1, 0);
+        return DISTRHO_PLUGIN_VERSION;
     }
 
-    int64_t getUniqueId() const noexcept override
-    {
-        // TODO
-        return d_cconst('D', 'M', 'a', 'G');
-    }
-
-    // -------------------------------------------------------------------
+    // ----------------------------------------------------------------------------------------------------------------
     // Init
 
+    void initAudioPort(bool input, uint32_t index, AudioPort& port) override;
     void initParameter(uint32_t index, Parameter& parameter) override;
 
-    // -------------------------------------------------------------------
+    // ----------------------------------------------------------------------------------------------------------------
     // Internal data
 
     float getParameterValue(uint32_t index) const override;
-    void  setParameterValue(uint32_t index, float value) override;
+    void setParameterValue(uint32_t index, float value) override;
 
-    // -------------------------------------------------------------------
+    // ----------------------------------------------------------------------------------------------------------------
     // Process
 
     void run(const float** inputs, float** outputs, uint32_t frames) override;
 
-    // -------------------------------------------------------------------
+    // ----------------------------------------------------------------------------------------------------------------
 
 private:
     CommonState* fGenState;
@@ -94,8 +93,6 @@ private:
     DISTRHO_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(DistrhoPluginMaxGen)
 };
 
-// -----------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 
 END_NAMESPACE_DISTRHO
-
-#endif  // DISTRHO_PLUGIN_MAX_GEN_HPP_INCLUDED
