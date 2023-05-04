@@ -26,6 +26,8 @@
 #define DISTRHO_PLUGIN_NUM_OUTPUTS   1
 #define DISTRHO_PLUGIN_USES_MODGUI   0
 
+#define DISTRHO_PLUGIN_CLAP_ID "modulay.shiro"
+
 #define DISTRHO_PLUGIN_LV2_CATEGORY "lv2:DelayPlugin"
 
 #define DISTRHO_PLUGIN_DESCRIPTION "Modulay is a delay with variable types of modulation based on the setting of the Morph-knob."

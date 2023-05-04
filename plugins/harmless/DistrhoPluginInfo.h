@@ -26,6 +26,8 @@
 #define DISTRHO_PLUGIN_NUM_OUTPUTS   2
 #define DISTRHO_PLUGIN_USES_MODGUI   0
 
+#define DISTRHO_PLUGIN_CLAP_ID "harmless.shiro"
+
 #define DISTRHO_PLUGIN_LV2_CATEGORY "lv2:ModulatorPlugin"
 
 #define DISTRHO_PLUGIN_DESCRIPTION "Harmless is a waveshapeable harmonic tremolo with a stereo phase control."

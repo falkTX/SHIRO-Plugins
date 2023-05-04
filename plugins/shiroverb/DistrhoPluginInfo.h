@@ -26,6 +26,8 @@
 #define DISTRHO_PLUGIN_NUM_OUTPUTS   2
 #define DISTRHO_PLUGIN_USES_MODGUI   0
 
+#define DISTRHO_PLUGIN_CLAP_ID "shiroverb.shiro"
+
 #define DISTRHO_PLUGIN_LV2_CATEGORY "lv2:ReverbPlugin"
 
 #define DISTRHO_PLUGIN_DESCRIPTION "Shiroverb is a shimmer-reverb based on the \"Gigaverb\"-genpatch, ported from the implementation by Juhana Sadeharju, and the \"Pitch-Shift\"-genpatch, both in Max MSP."

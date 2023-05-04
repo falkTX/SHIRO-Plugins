@@ -26,6 +26,8 @@
 #define DISTRHO_PLUGIN_NUM_OUTPUTS   1
 #define DISTRHO_PLUGIN_USES_MODGUI   0
 
+#define DISTRHO_PLUGIN_CLAP_ID "larynx.shiro"
+
 #define DISTRHO_PLUGIN_LV2_CATEGORY "lv2:ModulatorPlugin"
 
 #define DISTRHO_PLUGIN_DESCRIPTION "Larynx is a simple vibrato with a tone control."

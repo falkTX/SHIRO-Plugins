@@ -26,6 +26,6 @@ BUILD_CXX_FLAGS += -Wno-unused-parameter
 # --------------------------------------------------------------
 # Enable all possible plugin types
 
-all: jack ladspa lv2_dsp vst2 vst3
+all: jack clap ladspa lv2_dsp vst2 vst3
 
 # --------------------------------------------------------------
